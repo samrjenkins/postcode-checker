@@ -1,24 +1,15 @@
-# README
+Ruby version: 3.1.0 (specified in Gemfile)
+Rails version: 7.0.1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Development decisions:
+- Use MySQL database for scalability over default SQLite
 
-Things you may want to cover:
+Installation:
+- Install MySQL and ensure the MySQL server is running
+- Run `bin/setup` to install dependencies and prepare database
 
-* Ruby version
+Launch the app:
+- `bundle exec rails s`
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+A few improvements I would like to make:
+- Containerise the app (Docker) for ease of setup across environments
