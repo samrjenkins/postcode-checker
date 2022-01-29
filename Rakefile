@@ -6,3 +6,11 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+task default: %i[rubocop spec]
+
+require 'rubocop/rake_task'
+desc 'Run rubocop'
+task rubocop: :environment do
+  RuboCop::RakeTask.new
+end
