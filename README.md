@@ -11,5 +11,13 @@ Installation:
 Launch the app:
 - `bundle exec rails s`
 
+Run the tests:
+- RSpec suite is run with `bundle exec rspec`
+- It is also the default rake task and can be run with `bundle exec rake`
+
+Run the linter:
+- Rubocop is run with `bundle exec rubocop`
+
 A few improvements I would like to make:
 - Containerise the app (Docker) for ease of setup across environments
+- Add rubocop to default rake task
