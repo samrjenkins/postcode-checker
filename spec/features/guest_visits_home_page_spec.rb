@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-feature 'Guests visits home page' do
-  scenario 'viewing default Rails homepage' do
+describe 'Guests visits home page' do
+  it 'viewing default Rails homepage' do
     visit '/'
 
     expect(page).to have_content 'The Postcode Checker'
