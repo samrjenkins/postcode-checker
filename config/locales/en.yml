@@ -1,4 +1,6 @@
 en:
   msoa_checks:
-    show:
-      success: '%{postcode} is in the MSOA!'
+    false:
+      message: '%{postcode} is not in the MSOA 👎'
+    true:
+      message: '%{postcode} is in the MSOA 👍'
