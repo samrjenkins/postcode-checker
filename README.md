@@ -45,3 +45,13 @@
 ## Possible future improvements
 - Containerise the app (Docker) for ease of setup across environments
 - Build a UI or implement rake tasks for adding/destroying LSOA records from the DB
+
+## Disagreements with Rubocop
+- `Lint/MissingSuper` I want to be able to inherit from parent classes while overriding the `initialize` method. In my case, `ApplicationService` doesn't even define `initialize`, so calling `super` in its descendants would be a unnecessary.
+- `Metrics/BlockLength` I think it is pretty common for RSpec blocks to get long.
+- `RSpec/ExpectInHook` I like to stub dependencies in before hooks and I like to use `expect` to do the stubbing. The reason for this is that, in the future, should the stub no long be hit by the test, the test will fail, prompting the developer to remove the unused stub.
+- `RSpec/NamedSubject` I don't find that this affords much of an increase in readability.
+- `RSpec/NestedGroups` I increased the maximum nesting level by 1.
+- `RSpec/MessageSpies` this is a pattern I am less familiar with.
+- `RSpec/StubbedMock` see `RSpec/ExpectInHook`.
+- `Style/Documentation` ruby code is largely self-documenting. Class documentation is mainly for generating documentation onp platforms like Ruby Docs.
