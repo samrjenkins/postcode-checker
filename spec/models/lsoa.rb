@@ -10,7 +10,7 @@ describe Lsoa do
       let(:name) { nil }
 
       it 'does not save the record' do
-        expect { subject }.not_to change(Lsoa, :count)
+        expect { subject }.not_to change(described_class, :count)
       end
     end
 
@@ -18,7 +18,7 @@ describe Lsoa do
       let(:name) { '' }
 
       it 'does not save the record' do
-        expect { subject }.not_to change(Lsoa, :count)
+        expect { subject }.not_to change(described_class, :count)
       end
     end
 
@@ -26,17 +26,17 @@ describe Lsoa do
       let(:name) { ' ' }
 
       it 'does not save the record' do
-        expect { subject }.not_to change(Lsoa, :count)
+        expect { subject }.not_to change(described_class, :count)
       end
     end
 
     context 'when name is already taken by another record' do
       let(:name) { 'dummy_name' }
 
-      before { Lsoa.create!(name:) }
+      before { described_class.create!(name:) }
 
       it 'does not save the record' do
-        expect { subject }.not_to change(Lsoa, :count)
+        expect { subject }.not_to change(described_class, :count)
       end
     end
 
@@ -44,7 +44,7 @@ describe Lsoa do
       let(:name) { 'dummy_name' }
 
       it 'saves the record' do
-        expect { subject }.to change(Lsoa, :count).by(1)
+        expect { subject }.to change(described_class, :count).by(1)
       end
     end
   end
