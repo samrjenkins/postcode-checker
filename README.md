@@ -9,6 +9,7 @@
 ## Launch the app
 - `bundle exec rails s`
 - navigate to `localhost:3000` in your browser
+- Try it out!
 
 ## Run the tests
 - RSpec suite is run with `bundle exec rspec`
@@ -19,11 +20,13 @@
 
 ## Run tests and linters together
 - `bundle exec rake`
+- VCR is outputing an error message which I haven't been able to fix. Specs still appear to run correctly.
 
 ## Possible future improvements/known issues
-- Add validations/sanitisation on format of `AllowPostcode#postcode` and `Lsoa#name` to ensure that records can't be created that won't match the format of data served by Postcodes.io API
+- Add validations/sanitisation on format of `AllowPostcode#postcode` and `Lsoa#name` to ensure that all record have consistent formatting. Currently, care must be taken to ensure record are created with correct formatting.
 - Containerise the app (Docker) for ease of setup across environments
 - Build a UI or implement rake tasks for adding/destroying LSOA records from the DB
+- Weird VCR error message when running specs
 
 ## Development decisions
 - An interesting task that doesn't demand use of a DB
