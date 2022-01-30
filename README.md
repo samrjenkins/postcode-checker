@@ -11,6 +11,10 @@
 - navigate to `localhost:3000` in your browser
 - Try it out! Setup will have seeded the DB with the records required for the app to behave according to the tech test requirements.
 
+## Example usage
+![Screen Recording 2022-01-30 at 21 27 11](https://user-images.githubusercontent.com/36191075/151718838-f8020de4-8311-4cc8-a6d7-9562fd246ce2.gif)
+
+
 ## Run the tests
 - RSpec suite is run with `bundle exec rspec`
 
