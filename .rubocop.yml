@@ -2,10 +2,16 @@ AllCops:
   NewCops: enable
 Lint/MissingSuper:
   Enabled: false
+Metrics/BlockLength:
+  Exclude: [spec/**/*.rb]
 RSpec/ExpectInHook:
   Enabled: false
 RSpec/MessageSpies:
+  EnforcedStyle: receive
+RSpec/NamedSubject:
   Enabled: false
+RSpec/NestedGroups:
+  Max: 4
 RSpec/StubbedMock:
   Enabled: false
 Style/Documentation:
