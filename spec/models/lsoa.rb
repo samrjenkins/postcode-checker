@@ -4,7 +4,7 @@ require 'rails_helper'
 
 describe Lsoa do
   describe '#save' do
-    subject { described_class.new(name: name).save }
+    subject { described_class.new(name:).save }
 
     context 'when name is not present' do
       let(:name) { nil }
@@ -33,7 +33,7 @@ describe Lsoa do
     context 'when name is already taken by another record' do
       let(:name) { 'dummy_name' }
 
-      before { Lsoa.create!(name: name) }
+      before { Lsoa.create!(name:) }
 
       it 'does not save the record' do
         expect { subject }.not_to change(Lsoa, :count)
