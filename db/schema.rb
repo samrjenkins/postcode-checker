@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2022_01_30_164216) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["name"], name: "index_lsoas_on_name"
+    t.index ["name"], name: "index_lsoas_on_name", unique: true
   end
 
 end
