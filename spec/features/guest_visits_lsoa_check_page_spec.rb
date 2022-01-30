@@ -22,4 +22,10 @@ describe 'Guests visits LSOA check page spec' do
 
     expect(page).to have_content 'invalid is not a valid postcode'
   end
+
+  it 'viewing LSOA check page for explicitly allowed postcode' do
+    visit '/lsoa_checks/SH241AB'
+
+    expect(page).to have_content 'SH241AB is in the LSOA 👍'
+  end
 end
