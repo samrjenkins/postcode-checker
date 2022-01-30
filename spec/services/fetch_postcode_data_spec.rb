@@ -6,22 +6,10 @@ describe FetchPostcodeData do
   describe '.call' do
     subject { described_class.call(postcode) }
 
-    context 'when a Lambeth postcode', cassette: 'SE17QA' do
+    context 'when a recognised postcode', cassette: 'SE17QA' do
       let(:postcode) { 'SE17QA' }
 
-      it { is_expected.to include('lsoa' => 'Lambeth 036') }
-    end
-
-    context 'when a Southwark postcode', cassette: 'SE17QD' do
-      let(:postcode) { 'SE17QD' }
-
-      it { is_expected.to include('lsoa' => 'Southwark 034') }
-    end
-
-    context 'when not a Southwark postcode', cassette: 'OX14AJ' do
-      let(:postcode) { 'OX14AJ' }
-
-      it { is_expected.not_to include('lsoa' => 'Southwark 034') }
+      it { is_expected.to include('lsoa' => 'Lambeth 036B') }
     end
 
     context 'when an unrecognised postcode', cassette: 'SH241AA' do

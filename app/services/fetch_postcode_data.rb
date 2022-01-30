@@ -3,6 +3,8 @@
 require 'net/http'
 
 class FetchPostcodeData < ApplicationService
+  include PostcodeSanitizer
+
   HOST = 'api.postcodes.io'
 
   def initialize(postcode)
@@ -30,8 +32,6 @@ class FetchPostcodeData < ApplicationService
   def json_response = Net::HTTP.get(HOST, path)
 
   def path = "/postcodes/#{sanitized_postcode}"
-
-  def sanitized_postcode = postcode.downcase.gsub(' ', '')
 
   def error_class
     "#{error_message} error".titleize.gsub(' ', '').constantize

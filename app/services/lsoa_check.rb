@@ -19,7 +19,5 @@ class LsoaCheck < ApplicationService
 
   def postcode_data = FetchPostcodeData.call(postcode)
 
-  def allow_list
-    Lsoa.pluck(:name)
-  end
+  def allow_list = Lsoa.pluck(:name)
 end

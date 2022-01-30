@@ -8,12 +8,8 @@ class LsoaChecksController < ApplicationController
   end
 
   def show
-    @serviced_check = serviced_check
+    @serviced_check = ServicedCheck.call(params[:postcode])
   rescue InvalidPostcodeError
     @serviced_check = :invalid
   end
-
-  private
-
-  def serviced_check = ServicedCheck.call(params[:postcode])
 end
