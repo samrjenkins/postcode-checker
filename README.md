@@ -9,7 +9,7 @@
 ## Launch the app
 - `bundle exec rails s`
 - navigate to `localhost:3000` in your browser
-- Try it out!
+- Try it out! Setup will have seeded the DB with the records required for the app to behave according to the tech test requirements.
 
 ## Run the tests
 - RSpec suite is run with `bundle exec rspec`
