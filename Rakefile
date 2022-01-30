@@ -7,10 +7,15 @@ require_relative 'config/application'
 
 Rails.application.load_tasks
 
-task default: %i[rubocop spec]
+task default: %i[rubocop spec yalphabetize]
 
 require 'rubocop/rake_task'
 desc 'Run rubocop'
 task rubocop: :environment do
   RuboCop::RakeTask.new
+end
+
+desc 'Run yalphabetize'
+task yalphabetize: :environment do
+  system('bundle exec yalphabetize')
 end
