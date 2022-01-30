@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.postcodes.io/postcodes/???
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Sun, 30 Jan 2022 16:20:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '89'
+      Connection:
+      - keep-alive
+      X-Gnu:
+      - Michael J Blanchard
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"59-4l2Y4xZPGfDfhFLg8djhheI4yts"
+      Cf-Cache-Status:
+      - BYPASS
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=g08NgeFdirCRgRFejzSBAs7fdmMDLA8XhWOHTTLL1r7LaD4om1Htd5AOlkx95zRWbpIpy5lNOFBxuNepkE63%2BZeLz42JgmCiI8Dw7wz2fYatcIgxj1WM2txN1em00UL4Iew%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6d5c06f2de60776b-LHR
+    body:
+      encoding: UTF-8
+      string: '{"status":400,"error":"No postcode query submitted. Remember to include
+        query parameter"}'
+  recorded_at: Sun, 30 Jan 2022 16:20:21 GMT
+recorded_with: VCR 6.0.0

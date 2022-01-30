@@ -39,5 +39,13 @@ describe FetchPostcodeData do
         expect { subject }.to raise_error InvalidPostcodeError
       end
     end
+
+    context 'when an unprocessable postcode', cassette: '???' do
+      let(:postcode) { '???' }
+
+      it 'raises an error' do
+        expect { subject }.to raise_error InvalidPostcodeError
+      end
+    end
   end
 end
