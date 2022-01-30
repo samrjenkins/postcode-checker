@@ -7,19 +7,13 @@ class MsoaCheck < ApplicationService
     @postcode = postcode
   end
 
-  def call
-    msoa.start_with?(*ALLOW_LIST)
-  end
+  def call = msoa.start_with?(*ALLOW_LIST)
 
   private
 
   attr_reader :postcode
 
-  def msoa
-    postcode_data['msoa']
-  end
+  def msoa = postcode_data['msoa']
 
-  def postcode_data
-    FetchPostcodeData.call(postcode)
-  end
+  def postcode_data = FetchPostcodeData.call(postcode)
 end

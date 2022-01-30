@@ -1,6 +1,9 @@
 en:
   msoa_checks:
-    false:
-      message: '%{postcode} is not in the MSOA 👎'
-    true:
-      message: '%{postcode} is in the MSOA 👍'
+    form:
+      placeholder: 'Try a postcode...'
+      submit: 'Go!'
+    show:
+      message:
+        false: '%{postcode} is not in the MSOA 👎'
+        true: '%{postcode} is in the MSOA 👍'

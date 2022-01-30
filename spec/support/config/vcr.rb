@@ -11,12 +11,12 @@ RSpec.configure do |config|
   config.before(:example, :cassette) do |example|
     expect(Net::HTTP)
       .to receive(:get)
-      .with('api.postcodes.io', "/postcodes/#{example.metadata[:cassette]}")
+      .with('api.postcodes.io', "/postcodes/#{example.metadata[:cassette].downcase.gsub(' ', '')}")
       .and_call_original
   end
 
   config.around(:example, :cassette) do |example|
-    VCR.use_cassette example.metadata[:cassette], allow_unused_http_interactions: false do
+    VCR.use_cassette example.metadata[:cassette].downcase.gsub(' ', ''), allow_unused_http_interactions: false do
       example.run
     end
   end

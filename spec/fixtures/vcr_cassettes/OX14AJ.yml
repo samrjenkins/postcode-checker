@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.postcodes.io/postcodes/OX14AJ
+    uri: http://api.postcodes.io/postcodes/ox14aj
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 20:51:21 GMT
+      - Sun, 30 Jan 2022 13:42:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,11 +33,9 @@ http_interactions:
       Etag:
       - W/"363-twOMvrrtoiohhO7xFnmtEqq0p9Y"
       Cf-Cache-Status:
-      - HIT
-      Age:
-      - '14940'
+      - MISS
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BNqNudvzLfa1UtD4aFfeJlOkRR9eZ3IdQTkOEo1QXtA%2FeQmvkEgeGsFG2lHOm2H168N4zElmjBl01PgDzfcSobVI4fmVzxLtobWfDbWAblYLll2T7JDQNoGcLJi8L9VYw9E%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LOLfCAx4IPAmYWR7oNg89g0aSXUgJpnlaJ%2BZQ1d0n4NVxqRfbvCeDCbkMvdNQmtddReNHW8B5AZN8ToGJqmaPfzshqVdByZkd7UbamiWhtoKhJt2tq6kWORocn2tNQD%2FkQw%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Vary:
@@ -45,7 +43,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 6d55568a985b71ae-LHR
+      - 6d5b1f8ba9587741-LHR
     body:
       encoding: ASCII-8BIT
       string: '{"status":200,"result":{"postcode":"OX1 4AJ","quality":1,"eastings":451565,"northings":206323,"country":"England","nhs_ha":"South
@@ -55,5 +53,5 @@ http_interactions:
         East","admin_district":"Oxford","parish":"Oxford, unparished area","admin_county":"Oxfordshire","admin_ward":"Carfax
         & Jericho","ced":"University Parks","ccg":"NHS Oxfordshire","nuts":"Oxfordshire
         CC","codes":{"admin_district":"E07000178","admin_county":"E10000025","admin_ward":"E05013098","parish":"E43000128","parliamentary_constituency":"E14000873","ccg":"E38000136","ccg_id":"10Q","ced":"E58001274","nuts":"TLJ14","lsoa":"E01028521","msoa":"E02005947","lau2":"E07000178"}}}'
-  recorded_at: Sat, 29 Jan 2022 20:51:21 GMT
+  recorded_at: Sun, 30 Jan 2022 13:42:23 GMT
 recorded_with: VCR 6.0.0

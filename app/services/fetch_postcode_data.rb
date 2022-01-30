@@ -9,23 +9,17 @@ class FetchPostcodeData < ApplicationService
     @postcode = postcode
   end
 
-  def call
-    parsed_response['result']
-  end
+  def call = parsed_response['result']
 
   private
 
   attr_reader :postcode
 
-  def parsed_response
-    JSON.parse json_response
-  end
+  def parsed_response = JSON.parse json_response
 
-  def json_response
-    Net::HTTP.get(HOST, path)
-  end
+  def json_response = Net::HTTP.get(HOST, path)
 
-  def path
-    "/postcodes/#{postcode}"
-  end
+  def path = "/postcodes/#{sanitized_postcode}"
+
+  def sanitized_postcode = postcode.downcase.gsub(' ', '')
 end

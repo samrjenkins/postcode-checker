@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :msoa_checks, only: :show, param: :postcode
+  root to: redirect('/msoa_checks')
+  resources :msoa_checks, only: %i[index show create], param: :postcode
 end

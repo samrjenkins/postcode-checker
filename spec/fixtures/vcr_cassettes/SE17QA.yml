@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.postcodes.io/postcodes/SE17QA
+    uri: http://api.postcodes.io/postcodes/se17qa
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 29 Jan 2022 20:51:21 GMT
+      - Sun, 30 Jan 2022 13:42:23 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -33,11 +33,9 @@ http_interactions:
       Etag:
       - W/"330-tRr7ptnfrETmMK1ctDRco0TH15k"
       Cf-Cache-Status:
-      - HIT
-      Age:
-      - '2382'
+      - MISS
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=PlpsCEF3QG5JsMKpvOGtTiYdAS7UupuN14uc%2B1wyYLhuBbfbf88PD89F6vmrIS2fDDLla%2B%2FjQB3KQrRy9aNln5GJCR%2B41De59H1ps5LC5aJbAWYKMPIhGePTlacL%2FSm9wos%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3krVOr6fTsoxQezyTvNuhd%2Fg3Gb2oBJzIUbDdwGZfnlLxOetBc4s0ic2xF8hPcRBle2ADx47tymA3CiJpBo%2FQ8U1uVWRhvUYd7jB7ovp9mJC0BNlo18O1TWSNSci7pZmBTY%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Vary:
@@ -45,12 +43,12 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 6d555689cfa088bc-LHR
+      - 6d5b1f8a392c7797-LHR
     body:
       encoding: ASCII-8BIT
       string: '{"status":200,"result":{"postcode":"SE1 7QA","quality":1,"eastings":531183,"northings":179317,"country":"England","nhs_ha":"London","longitude":-0.111573,"latitude":51.49758,"european_electoral_region":"London","primary_care_trust":"Lambeth","region":"London","lsoa":"Lambeth
         036B","msoa":"Lambeth 036","incode":"7QA","outcode":"SE1","parliamentary_constituency":"Vauxhall","admin_district":"Lambeth","parish":"Lambeth,
         unparished area","admin_county":null,"admin_ward":"Bishop''s","ced":null,"ccg":"NHS
         South East London","nuts":"Lambeth","codes":{"admin_district":"E09000022","admin_county":"E99999999","admin_ward":"E05000416","parish":"E43000212","parliamentary_constituency":"E14001008","ccg":"E38000244","ccg_id":"72Q","ced":"E99999999","nuts":"TLI45","lsoa":"E01003014","msoa":"E02006801","lau2":"E09000022"}}}'
-  recorded_at: Sat, 29 Jan 2022 20:51:21 GMT
+  recorded_at: Sun, 30 Jan 2022 13:42:23 GMT
 recorded_with: VCR 6.0.0
