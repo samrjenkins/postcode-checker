@@ -1,10 +1,10 @@
 en:
-  msoa_checks:
+  lsoa_checks:
     form:
       placeholder: 'Try a postcode...'
       submit: 'Go!'
     show:
       message:
-        false: '%{postcode} is not in the MSOA 👎'
+        false: '%{postcode} is not in the LSOA 👎'
         invalid: '%{postcode} is not a valid postcode'
-        true: '%{postcode} is in the MSOA 👍'
+        true: '%{postcode} is in the LSOA 👍'

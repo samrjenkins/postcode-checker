@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-describe MsoaCheck do
+describe LsoaCheck do
   describe '.call' do
     subject { described_class.call(postcode) }
 
@@ -16,20 +16,20 @@ describe MsoaCheck do
           .and_return(response_postcode_data)
       end
 
-      context 'when MSOA is for Southwark' do
-        let(:response_postcode_data) { { 'msoa' => 'Southwark MSOA' } }
+      context 'when LSOA is for Southwark' do
+        let(:response_postcode_data) { { 'lsoa' => 'Southwark LSOA' } }
 
         it { is_expected.to be true }
       end
 
-      context 'when MSOA is for Lambeth' do
-        let(:response_postcode_data) { { 'msoa' => 'Lambeth MSOA' } }
+      context 'when LSOA is for Lambeth' do
+        let(:response_postcode_data) { { 'lsoa' => 'Lambeth LSOA' } }
 
         it { is_expected.to be true }
       end
 
-      context 'when MSOA is for neither Lambeth nor Southwark' do
-        let(:response_postcode_data) { { 'msoa' => 'Another MSOA' } }
+      context 'when LSOA is for neither Lambeth nor Southwark' do
+        let(:response_postcode_data) { { 'lsoa' => 'Another LSOA' } }
 
         it { is_expected.to be false }
       end

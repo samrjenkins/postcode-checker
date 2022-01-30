@@ -1,0 +1,4 @@
+<%= form_with url: lsoa_checks_path do |f| %>
+  <%= f.text_field :postcode, placeholder: t('lsoa_checks.form.placeholder'), value: params[:postcode] %>
+  <%= f.submit t('lsoa_checks.form.submit') %>
+<% end %>

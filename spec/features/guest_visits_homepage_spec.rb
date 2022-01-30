@@ -6,7 +6,7 @@ describe 'Guests visits homepage' do
   it 'visiting homepage' do
     visit '/'
 
-    expect(page).to have_current_path msoa_checks_path
+    expect(page).to have_current_path lsoa_checks_path
   end
 
   it 'submitting postcode using form', cassette: 'SE17QA' do
@@ -15,7 +15,7 @@ describe 'Guests visits homepage' do
     fill_in 'Try a postcode...', with: 'SE17QA'
     click_on 'Go!'
 
-    expect(page).to have_content 'SE17QA is in the MSOA 👍'
+    expect(page).to have_content 'SE17QA is in the LSOA 👍'
   end
 
   it 'submitting empty form' do
