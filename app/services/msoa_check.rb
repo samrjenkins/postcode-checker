@@ -8,7 +8,7 @@ class MsoaCheck < ApplicationService
   end
 
   def call
-    msoa.start_with? *ALLOW_LIST
+    msoa.start_with?(*ALLOW_LIST)
   end
 
   private
@@ -16,7 +16,7 @@ class MsoaCheck < ApplicationService
   attr_reader :postcode
 
   def msoa
-    postcode_data[:msoa]
+    postcode_data['msoa']
   end
 
   def postcode_data

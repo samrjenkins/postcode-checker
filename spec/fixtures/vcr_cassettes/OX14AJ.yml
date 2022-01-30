@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.postcodes.io/postcodes/OX14AJ
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 29 Jan 2022 20:51:21 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Gnu:
+      - Michael J Blanchard
+      Access-Control-Allow-Origin:
+      - "*"
+      Etag:
+      - W/"363-twOMvrrtoiohhO7xFnmtEqq0p9Y"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '14940'
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=BNqNudvzLfa1UtD4aFfeJlOkRR9eZ3IdQTkOEo1QXtA%2FeQmvkEgeGsFG2lHOm2H168N4zElmjBl01PgDzfcSobVI4fmVzxLtobWfDbWAblYLll2T7JDQNoGcLJi8L9VYw9E%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Vary:
+      - Accept-Encoding
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6d55568a985b71ae-LHR
+    body:
+      encoding: ASCII-8BIT
+      string: '{"status":200,"result":{"postcode":"OX1 4AJ","quality":1,"eastings":451565,"northings":206323,"country":"England","nhs_ha":"South
+        Central","longitude":-1.254396,"latitude":51.753234,"european_electoral_region":"South
+        East","primary_care_trust":"Oxfordshire","region":"South East","lsoa":"Oxford
+        008A","msoa":"Oxford 008","incode":"4AJ","outcode":"OX1","parliamentary_constituency":"Oxford
+        East","admin_district":"Oxford","parish":"Oxford, unparished area","admin_county":"Oxfordshire","admin_ward":"Carfax
+        & Jericho","ced":"University Parks","ccg":"NHS Oxfordshire","nuts":"Oxfordshire
+        CC","codes":{"admin_district":"E07000178","admin_county":"E10000025","admin_ward":"E05013098","parish":"E43000128","parliamentary_constituency":"E14000873","ccg":"E38000136","ccg_id":"10Q","ced":"E58001274","nuts":"TLJ14","lsoa":"E01028521","msoa":"E02005947","lau2":"E07000178"}}}'
+  recorded_at: Sat, 29 Jan 2022 20:51:21 GMT
+recorded_with: VCR 6.0.0

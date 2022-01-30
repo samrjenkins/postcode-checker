@@ -16,19 +16,19 @@ describe MsoaCheck do
     end
 
     context 'when MSOA is for Southwark' do
-      let(:response_postcode_data) { { msoa: 'Southwark MSOA' } }
+      let(:response_postcode_data) { { 'msoa' => 'Southwark MSOA' } }
 
       it { is_expected.to be true }
     end
 
     context 'when MSOA is for Lambeth' do
-      let(:response_postcode_data) { { msoa: 'Lambeth MSOA' } }
+      let(:response_postcode_data) { { 'msoa' => 'Lambeth MSOA' } }
 
       it { is_expected.to be true }
     end
 
     context 'when MSOA is for neither Lambeth nor Southwark' do
-      let(:response_postcode_data) { { msoa: 'Another MSOA' } }
+      let(:response_postcode_data) { { 'msoa' => 'Another MSOA' } }
 
       it { is_expected.to be false }
     end

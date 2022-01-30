@@ -9,6 +9,8 @@ class MsoaChecksController < ApplicationController
   private
 
   def msoa_check
-    MsoaCheck.call(params[:postcode])
+    return @msoa_check unless @msoa_check.nil?
+
+    @msoa_check = MsoaCheck.call(params[:postcode])
   end
 end
