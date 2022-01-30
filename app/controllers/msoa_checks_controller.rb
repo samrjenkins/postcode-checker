@@ -9,6 +9,8 @@ class MsoaChecksController < ApplicationController
 
   def show
     @msoa_check = msoa_check
+  rescue InvalidPostcodeError
+    @msoa_check = :invalid
   end
 
   private

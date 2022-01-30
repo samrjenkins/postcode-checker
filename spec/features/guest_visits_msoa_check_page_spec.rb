@@ -20,4 +20,10 @@ describe 'Guests visits MSOA check page spec' do
 
     expect(page).to have_content 'OX14AJ is not in the MSOA 👎'
   end
+
+  it 'viewing MSOA check page for invalid postcode', cassette: 'invalid' do
+    visit '/msoa_checks/invalid'
+
+    expect(page).to have_content 'invalid is not a valid postcode'
+  end
 end

@@ -23,5 +23,21 @@ describe FetchPostcodeData do
 
       it { is_expected.not_to include('msoa' => 'Southwark 034') }
     end
+
+    context 'when an unrecognised postcode', cassette: 'SH241AA' do
+      let(:postcode) { 'SH241AA' }
+
+      it 'raises an error' do
+        expect { subject }.to raise_error PostcodeNotFoundError
+      end
+    end
+
+    context 'when an invalid postcode', cassette: 'invalid' do
+      let(:postcode) { 'invalid' }
+
+      it 'raises an error' do
+        expect { subject }.to raise_error InvalidPostcodeError
+      end
+    end
   end
 end

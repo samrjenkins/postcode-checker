@@ -7,7 +7,11 @@ class MsoaCheck < ApplicationService
     @postcode = postcode
   end
 
-  def call = msoa.start_with?(*ALLOW_LIST)
+  def call
+    msoa.start_with?(*ALLOW_LIST)
+  rescue PostcodeNotFoundError
+    true
+  end
 
   private
 

@@ -6,4 +6,5 @@ en:
     show:
       message:
         false: '%{postcode} is not in the MSOA 👎'
+        invalid: '%{postcode} is not a valid postcode'
         true: '%{postcode} is in the MSOA 👍'
