@@ -24,6 +24,7 @@ describe 'Guests visits LSOA check page spec' do
   end
 
   it 'viewing LSOA check page for explicitly allowed postcode' do
+    AllowedPostcode.create!(postcode: 'sh241ab')
     visit '/lsoa_checks/SH241AB'
 
     expect(page).to have_content 'SH241AB is in the LSOA 👍'

@@ -14,7 +14,7 @@ class ServicedCheck < ApplicationService
   attr_reader :postcode
 
   def allowed_postcode?
-    %w[sh241aa sh241ab].include? postcode.downcase.gsub(' ', '')
+    AllowedPostcode.exists?(postcode: postcode.downcase.gsub(' ', ''))
   end
 
   def in_lsoa? = LsoaCheck.call(postcode)
