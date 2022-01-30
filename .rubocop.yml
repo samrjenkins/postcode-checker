@@ -1,11 +1,6 @@
 AllCops:
   NewCops: enable
-require:
-  - rubocop-rails
-  - rubocop-rspec
 Lint/MissingSuper:
-  Enabled: false
-Style/Documentation:
   Enabled: false
 RSpec/ExpectInHook:
   Enabled: false
@@ -13,3 +8,8 @@ RSpec/MessageSpies:
   Enabled: false
 RSpec/StubbedMock:
   Enabled: false
+Style/Documentation:
+  Enabled: false
+require:
+  - rubocop-rails
+  - rubocop-rspec

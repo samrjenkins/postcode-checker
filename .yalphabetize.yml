@@ -1,0 +1,3 @@
+exclude:
+  - config/database.yml
+  - spec/fixtures/vcr_cassettes
