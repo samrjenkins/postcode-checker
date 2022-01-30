@@ -20,6 +20,11 @@
 ## Run tests and linters together
 - `bundle exec rake`
 
+## Possible future improvements/known issues
+- Add validations/sanitisation on format of `AllowPostcode#postcode` and `Lsoa#name` to ensure that records can't be created that won't match the format of data served by Postcodes.io API
+- Containerise the app (Docker) for ease of setup across environments
+- Build a UI or implement rake tasks for adding/destroying LSOA records from the DB
+
 ## Development decisions
 - An interesting task that doesn't demand use of a DB
 - Instead, my app works as follows (happy path):
@@ -41,10 +46,6 @@
   - RSpec and Simplecov for testing and test coverage
   - VCR and Webmock for stubbing requests to the Postcodes.io API. VCR was my choice because it mocks the API's response exactly
   - Yalphabetize (my own gem!) for ensuring alphabetisation of YAML files.
-
-## Possible future improvements
-- Containerise the app (Docker) for ease of setup across environments
-- Build a UI or implement rake tasks for adding/destroying LSOA records from the DB
 
 ## Disagreements with Rubocop
 - `Lint/MissingSuper` I want to be able to inherit from parent classes while overriding the `initialize` method. In my case, `ApplicationService` doesn't even define `initialize`, so calling `super` in its descendants would be a unnecessary.
