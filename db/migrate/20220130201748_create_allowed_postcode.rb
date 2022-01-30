@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateAllowedPostcode < ActiveRecord::Migration[7.0]
   def change
     create_table :allowed_postcodes do |t|

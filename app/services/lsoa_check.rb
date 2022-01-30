@@ -8,7 +8,7 @@ class LsoaCheck < ApplicationService
   def call
     lsoa.start_with?(*allow_list)
   rescue PostcodeNotFoundError
-    true
+    false
   end
 
   private

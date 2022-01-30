@@ -41,7 +41,7 @@ describe LsoaCheck do
           .and_raise(PostcodeNotFoundError)
       end
 
-      it { is_expected.to be true }
+      it { is_expected.to be false }
     end
 
     context 'when fetching postcode data raises InvalidPostcodeError' do

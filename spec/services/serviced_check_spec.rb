@@ -30,9 +30,8 @@ describe ServicedCheck do
           .to receive(:exists?)
           .with(postcode:)
           .and_return false
+        expect(LsoaCheck).to receive(:call).and_return('dummy_lsoa_check')
       end
-
-      before { expect(LsoaCheck).to receive(:call).and_return('dummy_lsoa_check') }
 
       it { is_expected.to eq 'dummy_lsoa_check' }
     end
