@@ -4,7 +4,7 @@ class MsoaChecksController < ApplicationController
   def index; end
 
   def create
-    redirect_to msoa_check_path(params[:postcode])
+    redirect_to msoa_check_path(postcode: params[:postcode])
   end
 
   def show

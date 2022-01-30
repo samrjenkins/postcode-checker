@@ -17,4 +17,13 @@ describe 'Guests visits homepage' do
 
     expect(page).to have_content 'SE17QA is in the MSOA 👍'
   end
+
+  it 'submitting empty form' do
+    visit '/'
+
+    fill_in 'Try a postcode...', with: ''
+    click_on 'Go!'
+
+    expect(page).to have_field 'Try a postcode...'
+  end
 end
