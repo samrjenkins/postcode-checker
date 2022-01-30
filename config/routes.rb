@@ -2,5 +2,4 @@
 
 Rails.application.routes.draw do
   resources :msoa_checks, only: :show, param: :postcode
-  root 'home#show'
 end
