@@ -16,7 +16,7 @@ describe 'Guests visits homepage' do
     fill_in 'Try a postcode...', with: 'SE17QA'
     click_on 'Go!'
 
-    expect(page).to have_content 'SE17QA is in the LSOA 👍'
+    expect(page).to have_content 'We do service SE17QA 😃'
   end
 
   it 'submitting empty form' do
