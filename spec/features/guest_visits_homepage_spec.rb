@@ -9,7 +9,8 @@ describe 'Guests visits homepage' do
     expect(page).to have_current_path lsoa_checks_path
   end
 
-  it 'submitting postcode using form', cassette: 'SE17QA' do
+  it 'using form to submit postcode in allowed LSOA', cassette: 'SE17QA' do
+    Lsoa.create!(name: 'Lambeth')
     visit '/'
 
     fill_in 'Try a postcode...', with: 'SE17QA'

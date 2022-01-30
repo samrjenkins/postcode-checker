@@ -14,22 +14,20 @@ describe LsoaCheck do
           .to receive(:call)
           .with(postcode)
           .and_return(response_postcode_data)
+        expect(Lsoa)
+          .to receive(:pluck)
+          .with(:name)
+          .and_return(['Allowed', 'Another allowed'])
       end
 
-      context 'when LSOA is for Southwark' do
-        let(:response_postcode_data) { { 'lsoa' => 'Southwark LSOA' } }
+      context 'when fetched LSOA is allowed' do
+        let(:response_postcode_data) { { 'lsoa' => 'Allowed LSOA' } }
 
         it { is_expected.to be true }
       end
 
-      context 'when LSOA is for Lambeth' do
-        let(:response_postcode_data) { { 'lsoa' => 'Lambeth LSOA' } }
-
-        it { is_expected.to be true }
-      end
-
-      context 'when LSOA is for neither Lambeth nor Southwark' do
-        let(:response_postcode_data) { { 'lsoa' => 'Another LSOA' } }
+      context 'when fetched LSOA is not allowed' do
+        let(:response_postcode_data) { { 'lsoa' => 'Disallowed LSOA' } }
 
         it { is_expected.to be false }
       end

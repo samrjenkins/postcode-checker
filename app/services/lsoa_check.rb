@@ -1,14 +1,12 @@
 # frozen_string_literal: true
 
 class LsoaCheck < ApplicationService
-  ALLOW_LIST = %w[Lambeth Southwark].freeze
-
   def initialize(postcode)
     @postcode = postcode
   end
 
   def call
-    lsoa.start_with?(*ALLOW_LIST)
+    lsoa.start_with?(*allow_list)
   rescue PostcodeNotFoundError
     true
   end
@@ -20,4 +18,8 @@ class LsoaCheck < ApplicationService
   def lsoa = postcode_data['lsoa']
 
   def postcode_data = FetchPostcodeData.call(postcode)
+
+  def allow_list
+    Lsoa.pluck(:name)
+  end
 end
