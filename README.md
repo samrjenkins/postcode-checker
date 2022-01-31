@@ -3,7 +3,7 @@
 **Rails version: 7.0.1**
 
 ## Installation
-- Install MySQL and ensure the MySQL server is running
+- Install MySQL 🚨**IMPORTANT: >= v8.0.0**🚨 and ensure the MySQL server is running
 - Run `bin/setup` to install dependencies and prepare database
 
 ## Launch the app
@@ -28,7 +28,7 @@
 ## Possible future improvements/known issues
 Due to limited time constraints, I have prioritised development and robust testing of the guest-user-facing part of the app. Future work could include:
 - Add validations/sanitisation on format of `AllowPostcode#postcode` and `Lsoa#name` to ensure that all record have consistent formatting. Currently, care must be taken to ensure records are created with correct formatting.
-- Containerise the app (Docker) for ease of setup across environments
+- Containerise the app (Docker) for ease of setup across environments. This will particularly streamline setting up the correct version of MySQL .
 - Build an admin UI or implement rake tasks for adding/destroying LSOA records from the DB
 - Address weird VCR error message when running specs
 - Rename Lsoa model/table. Strictly, these records are not LSOAs. Rather, they are names of areas. Some suitable name might be `AllowedLocation`.
